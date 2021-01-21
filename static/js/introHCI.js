@@ -19,7 +19,12 @@ function initializePage() {
 function projectClick(e) {
 	e.preventDefault();
 	var containingProject = $(this).closest(".project");
-    containingProject.append("<div class='project-description'><p>Description of the project.</p></div>");
+    var description = $(containingProject).find(".project-description");
+    if (description.length == 0) {
+       $(containingProject).append("<div class='project-description'><p>Description of the project.</p></div>");
+    } else {
+       description.html("<p>Stop clicking on me! You just did it at " + (new Date()) + "</p>");
+    }
 }
 	// example: $("#div-id").click(functionToCall);
 
