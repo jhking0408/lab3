@@ -14,7 +14,7 @@ function initializePage() {
 	});
 	$("a.thumbnail").click(projectClick);
 	$("#testjs").text("Please wait...");
-	$(".jumbotron p").addClass("active");
+	$(".jumbotron p").toggleClass("active");
 }
 
 	// Add any additional listeners here
@@ -25,8 +25,9 @@ function projectClick(e) {
     if (description.length == 0) {
        $(containingProject).append("<div class='project-description'><p>Description of the project.</p></div>");
     } else {
-       description.html("<p>Stop clicking on me! You just did it at " + (new Date()) + "</p>");
+    	$(description).hide()
     }
+
 }
 	// example: $("#div-id").click(functionToCall);
 
