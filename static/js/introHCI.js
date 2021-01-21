@@ -14,6 +14,7 @@ function initializePage() {
 	});
 	$("a.thumbnail").click(projectClick);
 	$("#testjs").text("Please wait...");
+	$(".jumbotron p").addClass("active");
 }
 
 	// Add any additional listeners here
